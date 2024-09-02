@@ -1,0 +1,326 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e2439;
+    color: #f0f0f0;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-bg {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-bg h1 {
+    font-size: 60px;
+    margin-top: 20vh;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+.hero-bg p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4f81;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff1f60;
+    transform: scale(1.05);
+}
+
+#how-it-works {
+    padding: 50px 20px;
+    background-color: #162a49;
+    text-align: center;
+}
+
+#how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step {
+    flex: 1;
+    max-width: 300px;
+    background-color: #1a3b6b;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#subscriptions {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1b406f;
+}
+
+.tier {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #0a233b;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.tier:hover {
+    transform: scale(1.05);
+}
+
+#testimonials {
+    padding: 50px 20px;
+    background-color: #142d54;
+    text-align: center;
+}
+
+.testimonial {
+    background-color: #0a1f3b;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a1a33;
+    color: #bbb;
+}
+
+/* Scrolling Background Animation */
+@keyframes scroll-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('scrolling-background.jpg') repeat-x;
+    background-size: cover;
+    animation: scroll-background 30s linear infinite;
+    z-index: 1;
+    opacity: 0.5;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #162a49;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4f81;
+}
+
+body {
+    margin-top: 60px; /* Adjust if nav height changes */
+}
+.tier {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #0a233b;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tier:hover {
+    transform: scale(1.05);
+}
+
+.tier-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: #16213e;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.tier.active {
+    filter: brightness(100%);
+}
+
+.tier.inactive {
+    filter: brightness(50%);
+}
+
+.tier.active .tier-details {
+    display: block;
+}
+.purchase-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4f81;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.purchase-button:hover {
+    background-color: #ff1f60;
+    transform: scale(1.05);
+}
+.purchase-button {
+    display: none; /* Default to hidden */
+}
+
+.tier.active .purchase-button {
+    display: inline-block; /* Show when tier is active */
+}
+#purchase-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#purchase-button {
+    padding: 10px 20px;
+    background-color: #ff4f81;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block; /* Center it as a block element */
+    margin: 0 auto; /* Center it horizontally */
+}
+
+#purchase-button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+#cancel-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff4f81;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block; /* Center it as a block element */
+    margin: 0 auto; /* Center it horizontally */
+}
+
+#cancel-button:hover {
+    background-color: #ff1f60;
+    transform: scale(1.05);
+}
+
+#cancel-button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+/* User Login Form Styles */
+#user-login {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#user-login h2 {
+    text-align: center;
+    color: #333;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#login-form button {
+    padding: 10px;
+    background-color: #ff4f81;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #ff1f60;
+    transform: scale(1.05);
+}
+
+#login-form button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
